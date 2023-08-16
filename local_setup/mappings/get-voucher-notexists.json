@@ -1,0 +1,19 @@
+{
+  "priority": "3",
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/api/v1/voucher",
+    "queryParameters": {
+      "code": {
+        "matches": "\\b[A-Z0-9]{6}\\b"
+      }
+    }
+  },
+  "response": {
+    "status": 404,
+    "jsonBody": { "status": "not exists", "message": "Voucher Code does not exist" },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

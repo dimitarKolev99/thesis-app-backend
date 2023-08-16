@@ -1,0 +1,19 @@
+{
+  "priority": 2,
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/api/v1/appliance",
+    "queryParameters": {
+      "serial": {
+        "equalTo": "d8b25784-c16f-449a-9006-6972e8a9111b"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": { "status": "Success", "message": "Appliance exists" },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

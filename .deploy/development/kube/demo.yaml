@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: localapibackend
+  labels:
+    app: localapibackend
+    version: master_c2be4d32c99612f81f4e5b4dd16e6556ba0d67d8_1430
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: localapibackend
+  template:
+    metadata:
+      labels:
+        app: localapibackend
+        version: master_c2be4d32c99612f81f4e5b4dd16e6556ba0d67d8_1430
+    spec:
+      containers:
+        - name: localapibackend-minikube
+          image: dimitarkolevdocker/localapibackend-minikube:latest
+          ports:
+            - containerPort: 8081
+          imagePullPolicy: Never
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: localapibackend
+spec:
+  selector:
+    app: localapibackend
+  ports:
+    - port: 8081
+      targetPort: 8081
+  type: LoadBalancer

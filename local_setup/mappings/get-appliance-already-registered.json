@@ -1,0 +1,19 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/api/v1/appliance",
+    "queryParameters": {
+      "serial": {
+        "equalTo": "d7b25784-c16f-449a-9006-6972e8a9111b"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": { "status": "Already Licensed", "message": "Appliance is already licensed" },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

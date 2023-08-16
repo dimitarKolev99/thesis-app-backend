@@ -1,0 +1,1 @@
+Invoke-WebRequest -Method POST -InFile 'get-appliance-exists.json' -ContentType 'application/json' -Uri 'http://localhost:8080/__admin/mappings'

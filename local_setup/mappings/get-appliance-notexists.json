@@ -1,0 +1,19 @@
+{
+  "priority": 3,
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/api/v1/appliance",
+    "queryParameters": {
+      "serial": {
+        "matches": "([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})"
+      }
+    }
+  },
+  "response": {
+    "status": 404,
+    "jsonBody": { "status": "Error", "message": "Appliance does not exist" },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "priority": "2",
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/api/v1/voucher",
+    "queryParameters": {
+      "code": {
+        "equalTo": "XCGK-11VM"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": { "status": "Already Redeemed", "message": "Voucher Code is already Redeemed" },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

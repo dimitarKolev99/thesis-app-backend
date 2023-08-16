@@ -1,0 +1,20 @@
+{
+  "priority": "1",
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/api/v1/voucher",
+    "queryParameters": {
+      "code": {
+        "equalTo": "XCGK-12VM"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": { "status": "exists", "message": "Voucher Code exists" },
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
+
